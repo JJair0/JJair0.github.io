@@ -9,9 +9,58 @@
 <body>
 
 <h1 style="text-align:center;background:radial-gradient(circle,#88FEBF,#FFFFFF);font-family:Georgia;">
-TITULO COOl</h1>
+HOLA</h1>
 
-<p style="color:#88FEBF;text-align:center;font-family:Petit Formal Script;">Eslogan <br> inspirador.</p>
+<p style="color:#66A579;text-align:center;font-family:Petit Formal Script;">Escribe <br> un número (a).</p>
+
+<input id="en1" type="number" style="font-size: xx-large;margin-left: 625px;border: 1px solid #99CDFE;box-shadow: 4px 7px 7px #000; width:7%;"><br><br>
+
+<p style="color:#66A579;text-align:center;font-family:Petit Formal Script;">Escribe <br> otro número (b).</p>
+
+<input id="en2" type="number" style="font-size: xx-large;margin-left: 625px;border: 1px solid #99CDFE;box-shadow: 4px 7px 7px #000;width:7%;"><br><br>
+
+<p style="color:#66A579;text-align:center;font-family:Petit Formal Script;">Elige <br> una operación.</p>
+
+<button onclick="suma()" style="font-size: xx-large;margin-left: 550px;border-radius: 30px;"><img src="suma-signo-mas.png" width="20px"></button>
+<button onclick="division()" style="font-size: xx-large;border-radius: 30px;" ><img src="división.png" width="20px" ></button>
+<button onclick="producto()" style="font-size: xx-large;border-radius: 30px;" >x</button>
+<button onclick="resta1()" style="font-size: xx-large;border-radius: 30px;" >a-b</button>
+<button onclick="resta2()" style="font-size: xx-large;border-radius: 30px;" >b-a</button>
+
+<p style="color:#66A579;text-align:center;font-family:Petit Formal Script;">Mira <br> el resultado:</p>
+
+<p id="resultado" style="background: #66A594; padding: 4px 20px;border-radius: 30px;margin: 30px 600px;text-align:center;"></p>
+
+<script>
+function suma(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("resultado").innerHTML = Number(a) + Number(b);
+}
+function division(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("resultado").innerHTML = Number(a)/Number(b);
+}
+function producto(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("resultado").innerHTML = Number(a)*Number(b);
+}
+function resta1(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("resultado").innerHTML = Number(a)-Number(b);
+}
+function resta2(){
+    a = document.getElementById("en1").value;
+    b = document.getElementById("en2").value;
+    document.getElementById("resultado").innerHTML = Number(b)-Number(a);
+}
+</script>
+
+<a href="https://www.youtube.com/watch?v=OvhVLFQmgOY" target="_blank" style="margin-left: 610px; font-family: calibri;">Video que me ayudó</a>
+
 
 </body>
 </html>
